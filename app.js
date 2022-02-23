@@ -6,9 +6,14 @@ const publicPath = path.join(__dirname, "./public");
 app.use(express.static(publicPath));
 
 app.get("/", (req, res) => {
-  const home = path.join(__dirname, "./views/home.html");
-  res.sendFile(home);
+  res.send("<h1>Hello World!</h1>");
 });
+res.send("<h1>Hello World!</h1>");
+
+// app.get("/", (req, res) => {
+//   const home = path.join(__dirname, "./views/home.html");
+//   res.sendFile(home);
+// });
 app.get("/register", (req, res) => {
   const register = path.join(__dirname, "./views/register.html");
   res.sendFile(register);
